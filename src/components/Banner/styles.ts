@@ -8,11 +8,18 @@ export const Imagem = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   font-weight: bold;
-  padding-top: 340px;
+
+  .container {
+    position: relative;
+    padding-top: 340px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 
   ${TagContainer} {
     position: absolute;
-    top: 32px;
+    top: 34px;
   }
 `
 
