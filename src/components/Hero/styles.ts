@@ -39,7 +39,7 @@ export const BannerHero = styled.div`
   }
 `
 export const Infos = styled.div`
-  padding-top: 16px;
+  padding: 16px;
   background-color: ${Cores.preta};
   max-width: 290px;
   font-weight: bold;
