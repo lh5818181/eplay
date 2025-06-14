@@ -2,17 +2,13 @@ import React from 'react'
 import Section from '../Section'
 
 import { Items, Item, Action, Modal, ModalContente } from './styles'
+import { GalleryItems } from '../../pages/Home'
 
 import horgworts from '../../assets/images/image-hogwortslegacy.png'
 import spiderman from '../../assets/images/banner-homem-aranha.png'
 import play from '../../assets/images/botao-play 1.png'
 import zoom from '../../assets/images/mais-zoom 1.png'
 import fechar from '../../assets/images/fechar.png'
-
-interface GalleryItems {
-  type: 'imagem' | 'video'
-  url: string
-}
 
 const mock: GalleryItems[] = [
   {
