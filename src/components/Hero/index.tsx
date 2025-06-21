@@ -1,29 +1,41 @@
 import React from 'react'
-import bannerImg from '../../assets/images/fundo_hogwarts.png'
 import Button from '../Button'
 import Tag from '../Tag'
 import { BannerHero, Infos } from './styles'
+import { Game } from '../../pages/Home'
 
-const Hero: React.FC = () => (
-  <BannerHero style={{ backgroundImage: `url(${bannerImg})` }}>
+import { formataPreco } from '../ProductsList'
+
+type Props = {
+  game: Game
+}
+
+const Hero: React.FC<Props> = ({ game }) => (
+  <BannerHero style={{ backgroundImage: `url(${game.media.cover})` }}>
     <div className="container">
       <div>
-        <Tag>RPG</Tag>
-        <Tag>PS5</Tag>
+        <Tag>{game.details.category}</Tag>
+        <Tag>{game.details.system}</Tag>
       </div>
 
       <Infos>
-        <h2>Hogwarts Legacy</h2>
+        <h2>{game.name}</h2>
         <p>
-          <span>De R$ 250,00</span>
-          por apenas R$ 190,90
+          {game.prices.discount && (
+          <span>De {formataPreco(game.prices.old)}</span>
+          )}
+          {game.prices.current && (
+         <><span>Por {formataPreco(game.prices.current)}</span></>
+          )}
         </p>
+         {game.prices.current && (
         <Button
-          type={'button'}
+          type='button'
           tittle={'Clique para adicionar este jogo ao carrinho'}
         >
           Adicionar ao carrinho
         </Button>
+         )}
       </Infos>
     </div>
   </BannerHero>

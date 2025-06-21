@@ -1,12 +1,6 @@
+import { useEffect, useState } from 'react'
 import Banner from '../../components/Banner'
 import ProductsList from '../../components/ProductsList'
-import { useEffect, useState } from 'react'
-
-import resident from '../../assets/images/resident evil 4.png'
-import diablo from '../../assets/images/diablo.png'
-import zelda from '../../assets/images/zelda.png'
-import starWars from '../../assets/images/star wars.png'
-import streetFighter from '../../assets/images/street fighter.png'
 
 export interface GalleryItems {
   type: 'imagem' | 'video'
@@ -36,6 +30,7 @@ export type Game = {
     gallery: GalleryItems[]
   }
 }
+
 const Home = () => {
   const [promocoes, setPromocoes] = useState<Game[]>([])
   const [emBreve, setEmBreve] = useState<Game[]>([])

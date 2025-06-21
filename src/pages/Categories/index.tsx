@@ -1,12 +1,7 @@
-import ProductsList from '../../components/ProductsList'
 import { Game } from '../../pages/Home'
 
-import resident from '../../assets/images/resident evil 4.png'
-import diablo from '../../assets/images/diablo.png'
-import zelda from '../../assets/images/zelda.png'
-import starWars from '../../assets/images/star wars.png'
-import streetFighter from '../../assets/images/street fighter.png'
 import { useEffect, useState } from 'react'
+import ProductsList from '../../components/ProductsList'
 
 const Categories = () => {
   const [gamesAcao, setGamesAcao] = useState<Game[]>([])
