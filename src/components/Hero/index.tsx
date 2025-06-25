@@ -22,20 +22,22 @@ const Hero: React.FC<Props> = ({ game }) => (
         <h2>{game.name}</h2>
         <p>
           {game.prices.discount && (
-          <span>De {formataPreco(game.prices.old)}</span>
+            <span>De {formataPreco(game.prices.old)}</span>
           )}
           {game.prices.current && (
-         <><span>Por {formataPreco(game.prices.current)}</span></>
+            <>
+              <span>Por {formataPreco(game.prices.current)}</span>
+            </>
           )}
         </p>
-         {game.prices.current && (
-        <Button
-          type='button'
-          tittle={'Clique para adicionar este jogo ao carrinho'}
-        >
-          Adicionar ao carrinho
-        </Button>
-         )}
+        {game.prices.current && (
+          <Button
+            type="button"
+            tittle={'Clique para adicionar este jogo ao carrinho'}
+          >
+            Adicionar ao carrinho
+          </Button>
+        )}
       </Infos>
     </div>
   </BannerHero>
