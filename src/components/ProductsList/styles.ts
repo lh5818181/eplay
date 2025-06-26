@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Props } from '.'
 import { Cores } from '../../styles'
 import { Card } from '../Product/styles'
+import { brackpoints } from '../../styles'
 
 export const Container = styled.section<Omit<Props, 'title' | 'games'>>`
   padding: 32px 0;
@@ -21,6 +22,14 @@ export const Listagem = styled.ul`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 24px;
   margin-top: 40px;
+
+  @media (max-width: ${brackpoints.desktop}) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: ${brackpoints.tablet}) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const title = styled.h2`

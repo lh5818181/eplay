@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Cores } from '../../styles'
+import { brackpoints, Cores } from '../../styles'
 import { TagContainer } from '../Tag/styles'
 
 export const BannerHero = styled.div`
@@ -13,6 +13,10 @@ export const BannerHero = styled.div`
   background-size: 100%;
 
   padding-top: 16px;
+
+  @media (max-width: ${brackpoints.tablet}) {
+    backgroud-size: cover;
+  }
 
   &::after {
     position: absolute;

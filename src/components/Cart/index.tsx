@@ -16,9 +16,7 @@ import { close, remove } from '../../store/reducers/cart'
 import { formataPreco } from '../ProductsList'
 
 const Cart = () => {
-  const { isOpen, items,
-
-   } = useSelector((state: RootReducer) => state.cart)
+  const { isOpen, items } = useSelector((state: RootReducer) => state.cart)
 
   const dispatch = useDispatch()
 
@@ -27,7 +25,7 @@ const Cart = () => {
   }
 
   const getTotalPrice = () => {
-   return items.reduce((acumulador, valorAtual) => {
+    return items.reduce((acumulador, valorAtual) => {
       return (acumulador += valorAtual.prices.current!)
     }, 0)
   }
@@ -56,7 +54,8 @@ const Cart = () => {
         </ul>
         <Quantity>{items.length} jogo(s) no carrinho</Quantity>
         <Prices>
-          Total de {formataPreco(getTotalPrice())} <span>Em até 6x sem juros</span>
+          Total de {formataPreco(getTotalPrice())}{' '}
+          <span>Em até 6x sem juros</span>
         </Prices>
         <Button type="button" tittle="Clique aqui para continuar com a compra">
           Continuar com a compra
