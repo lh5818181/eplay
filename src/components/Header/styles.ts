@@ -16,14 +16,11 @@ export const HeaderBar = styled.header`
     font-weight: bold;
   }
 
-  div {
+  > div {
     display: flex;
     align-items: center;
   }
 
-  @media (max-width: ${brackpoints.tablet}) {
-    display: none;
-  }
 `
 export const Links = styled.a`
   display: flex;
@@ -39,4 +36,19 @@ export const CartButton = styled.a`
   img {
     margin-left: 16px;
   }
+`
+
+export const HamburgerMenu = styled.div`
+width: 32px;
+
+span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: ${Cores.branca};
+  margin-bottom: 4px;
+  }
+
+  @media (min-width: ${brackpoints.tablet}) {
+    display: none;}
 `

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { HeaderBar, Links, LinkItem, CartButton } from './styles'
+import { HeaderBar, Links, LinkItem, CartButton, HamburgerMenu } from './styles'
 import logo from '../../assets/images/logo vetor.svg'
 import carrinho from '../../assets/images/carrinho.svg'
 
@@ -18,6 +18,11 @@ const Header = () => {
   return (
     <HeaderBar>
       <div>
+        <HamburgerMenu>
+          <span></span>
+          <span></span>
+          <span></span>
+        </HamburgerMenu>
         <Link to="/">
           <img src={logo} alt="EPLAY" />
         </Link>
