@@ -1,29 +1,13 @@
 import React from 'react'
 import Section from '../Section'
 
-import { Items, Item, Action, Modal, ModalContente } from './styles'
 import { GalleryItems } from '../../pages/Home'
 
-import horgworts from '../../assets/images/image-hogwortslegacy.png'
-import spiderman from '../../assets/images/banner-homem-aranha.png'
 import play from '../../assets/images/botao-play 1.png'
 import zoom from '../../assets/images/mais-zoom 1.png'
 import fechar from '../../assets/images/fechar.png'
 
-const mock: GalleryItems[] = [
-  {
-    type: 'imagem',
-    url: horgworts
-  },
-  {
-    type: 'video',
-    url: spiderman
-  },
-  {
-    type: 'video',
-    url: 'https://www.youtube.com/embed/uHGShqcAHlQ?si=uz-4ZA9F8pCEdZZL'
-  }
-]
+import { Items, Item, Action, Modal, ModalContente } from './styles'
 
 type Props = {
   defaultCover?: string

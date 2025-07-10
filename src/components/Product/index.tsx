@@ -1,4 +1,3 @@
-import { idText } from 'typescript'
 import Tag from '../Tag'
 
 import { Card, Descricao, Titulo, Infos } from './styles'
@@ -30,7 +29,7 @@ const Product = ({
   }
 
   return (
-    <Card to={`/product/${id}`}>
+    <Card title={`Clique aqui para ver mais detalhes do jogo ${title}`} to={`/product/${id}`}>
       <img src={image} />
       <Infos>
         {infos.map((info) => (

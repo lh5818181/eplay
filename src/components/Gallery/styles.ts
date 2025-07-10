@@ -5,6 +5,7 @@ export const Items = styled.ul`
   display: flex;
   gap: 16px
   flex-wrap: wrap;
+  cursor: zoom-in;
 `
 export const Action = styled.div`
   position: absolute;

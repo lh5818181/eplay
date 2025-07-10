@@ -1,5 +1,14 @@
 import { Link } from 'react-router-dom'
-import { HeaderBar, Links, LinkItem, CartButton, HamburgerMenu, HeaderRow, NavMobile } from './styles'
+import { HashLink } from 'react-router-hash-link'
+import {
+  HeaderBar,
+  Links,
+  LinkItem,
+  CartButton,
+  HamburgerMenu,
+  HeaderRow,
+  NavMobile
+} from './styles'
 import logo from '../../assets/images/logo vetor.svg'
 import carrinho from '../../assets/images/carrinho.svg'
 
@@ -21,33 +30,51 @@ const Header = () => {
     <HeaderBar>
       <HeaderRow>
         <div>
-        <HamburgerMenu onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </HamburgerMenu>
-        <Link to="/">
-          <img src={logo} alt="EPLAY" />
-        </Link>
-      </div>
-      <CartButton onClick={openCart}>
-        {items.length} <span>- produto(s)</span>
-        <img src={carrinho} alt="Carrinho" />
-      </CartButton>
+          <HamburgerMenu onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </HamburgerMenu>
+          <Link to="/">
+            <img src={logo} alt="EPLAY" />
+          </Link>
+        </div>
+        <CartButton onClick={openCart}>
+          {items.length} <span>- produto(s)</span>
+          <img src={carrinho} alt="Carrinho" />
+        </CartButton>
       </HeaderRow>
       <NavMobile className={isMenuOpen ? 'is-open' : ''}>
-          <Links>
-            <LinkItem>
-              <Link to="/categories">Categorias</Link>
-            </LinkItem>
-            <LinkItem>
-              <a href="#">Novidades</a>
-            </LinkItem>
-            <LinkItem>
-              <a href="#">Promoções</a>
-            </LinkItem>
-          </Links>
-        </NavMobile>
+        <Links>
+          <LinkItem>
+            <Link
+              title="Clique aqui para acessar a página de categorias"
+              to="/categories"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Categorias
+            </Link>
+          </LinkItem>
+          <LinkItem>
+            <HashLink
+              title="Clique aqui para acessar a seção de em breve"
+              to="#/coming-soon"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Em breve
+            </HashLink>
+          </LinkItem>
+          <LinkItem>
+            <HashLink
+              title="Clique aqui para acessar a seção de promoções"
+              to="#/on-sale"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Promoções
+            </HashLink>
+          </LinkItem>
+        </Links>
+      </NavMobile>
     </HeaderBar>
   )
 }
