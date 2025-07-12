@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { brackpoints, Cores } from '../../styles'
+import { brackpoints, colors } from '../../styles'
 
 export const Links = styled.a`
   display: flex;
@@ -12,13 +12,13 @@ export const Links = styled.a`
 `
 
 export const HeaderBar = styled.header`
-  background-color: ${Cores.cinza};
+  background-color: ${colors.gray};
   padding: 24px;
   border-radius: 16px;
   margin-bottom: 80px;
 
   a {
-    color: ${Cores.branca};
+    color: ${colors.white};
     text-decoration: none;
     font-weight: bold;
   }
@@ -87,7 +87,7 @@ export const HamburgerMenu = styled.div`
     display: block;
     width: 100%;
     height: 2px;
-    background-color: ${Cores.branca};
+    background-color: ${colors.white};
     margin-bottom: 4px;
   }
 
