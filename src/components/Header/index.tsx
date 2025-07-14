@@ -22,51 +22,54 @@ const Header = () => {
     <S.HeaderBar>
       <S.HeaderRow>
         <div>
-          <S.HamburgerMenu onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <span></span>
-            <span></span>
-            <span></span>
+          <S.HamburgerMenu onClick={() => setIsMenuOpen((prev) => !prev)}>
+            <span />
+            <span />
+            <span />
           </S.HamburgerMenu>
           <Link to="/">
             <img src={logo} alt="EPLAY" />
           </Link>
+
+          <S.NavMobile className={isMenuOpen ? 'is-open' : ''}>
+            <ul>
+              <S.LinkItem>
+                <Link
+                  title="Categorias"
+                  to="/categories"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Categorias
+                </Link>
+              </S.LinkItem>
+              <S.LinkItem>
+                <HashLink
+                  title="Em breve"
+                  to="/#coming-soon"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Em breve
+                </HashLink>
+              </S.LinkItem>
+              <S.LinkItem>
+                <HashLink
+                  title="Promoções"
+                  to="/#on-sale"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Promoções
+                </HashLink>
+              </S.LinkItem>
+            </ul>
+          </S.NavMobile>
         </div>
-        <S.CartButton onClick={openCart}>
-          {items.length} <span>- produto(s)</span>
+
+        <S.CartButton type="button" onClick={openCart}>
+          {items.length}
+          <span>- produto(s)</span>
           <img src={cartIcon} alt="Carrinho" />
         </S.CartButton>
       </S.HeaderRow>
-      <S.NavMobile className={isMenuOpen ? 'is-open' : ''}>
-        <S.Links>
-          <S.LinkItem>
-            <Link
-              title="Clique aqui para acessar a página de categorias"
-              to="/categories"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Categorias
-            </Link>
-          </S.LinkItem>
-          <S.LinkItem>
-            <HashLink
-              title="Clique aqui para acessar a seção de em breve"
-              to="#/coming-soon"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Em breve
-            </HashLink>
-          </S.LinkItem>
-          <S.LinkItem>
-            <HashLink
-              title="Clique aqui para acessar a seção de promoções"
-              to="#/on-sale"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Promoções
-            </HashLink>
-          </S.LinkItem>
-        </S.Links>
-      </S.NavMobile>
     </S.HeaderBar>
   )
 }

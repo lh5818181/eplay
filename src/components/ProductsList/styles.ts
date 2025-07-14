@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Props } from '.'
 import { colors } from '../../styles'
 import { Card } from '../Product/styles'
-import { brackpoints } from '../../styles'
+import { breakpoints } from '../../styles'
 
 export const Container = styled.section<Omit<Props, 'title' | 'games'>>`
   padding: 32px 0;
@@ -23,11 +23,11 @@ export const Listagem = styled.ul`
   gap: 24px;
   margin-top: 40px;
 
-  @media (max-width: ${brackpoints.desktop}) {
+  @media (max-width: ${breakpoints.desktop}) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (max-width: ${brackpoints.tablet}) {
+  @media (max-width: ${breakpoints.tablet}) {
     grid-template-columns: 1fr;
   }
 `

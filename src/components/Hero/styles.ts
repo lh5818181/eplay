@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { brackpoints, colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 import { TagContainer } from '../Tag/styles'
 
 export const BannerHero = styled.div`
@@ -14,7 +14,7 @@ export const BannerHero = styled.div`
 
   padding-top: 16px;
 
-  @media (max-width: ${brackpoints.tablet}) {
+  @media (max-width: ${breakpoints.tablet}) {
     backgroud-size: cover;
   }
 

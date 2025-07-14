@@ -8,7 +8,7 @@ export const colors = {
   lightGray: '#A3A3A3'
 }
 
-export const brackpoints = {
+export const breakpoints = {
   desktop: '1024px',
   tablet: '768px'
 }
@@ -33,7 +33,7 @@ export const GlobalCss = createGlobalStyle`
       width: 100%;
 
 
-      @media (max-width: ${brackpoints.desktop}) {
+      @media (max-width: ${breakpoints.desktop}) {
         max-width: 80%;
 
       }
