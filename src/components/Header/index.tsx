@@ -28,7 +28,9 @@ const Header = () => {
             <span />
           </S.HamburgerMenu>
           <Link to="/">
-            <img src={logo} alt="EPLAY" />
+            <h1>
+              <img src={logo} alt="EPLAY" />
+            </h1>
           </Link>
 
           <S.NavMobile className={isMenuOpen ? 'is-open' : ''}>
@@ -64,7 +66,7 @@ const Header = () => {
           </S.NavMobile>
         </div>
 
-        <S.CartButton type="button" onClick={openCart}>
+        <S.CartButton role="button" onClick={openCart}>
           {items.length}
           <span>- produto(s)</span>
           <img src={cartIcon} alt="Carrinho" />

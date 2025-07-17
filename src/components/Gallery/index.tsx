@@ -1,8 +1,6 @@
 import React from 'react'
 import Section from '../Section'
 
-import { GalleryItems } from '../../pages/Home'
-
 import play from '../../assets/images/botao-play 1.png'
 import zoom from '../../assets/images/mais-zoom 1.png'
 import closeIcon from '../../assets/images/fechar.png'

@@ -9,6 +9,16 @@ export const HeaderBar = styled.header`
   margin-bottom: 80px;
   display: flex;
   align-items: center;
+
+  a,
+  span {
+    color: ${colors.white};
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  h1 {
+  line-height: 0;}
 `
 
 export const HeaderRow = styled.div`
@@ -46,7 +56,7 @@ export const HamburgerMenu = styled.div`
   }
 `
 
-export const CartButton = styled.button`
+export const CartButton = styled.span`
   display: flex;
   background: none;
   border: none;

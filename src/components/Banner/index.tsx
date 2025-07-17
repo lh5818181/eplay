@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import Tag from '../Tag'
 import Button from '../Button'
+import Loader from '../Loader'
 import { parseToBrl } from '../../utils'
 import { useGetFeaturedGameQuery } from '../../services/api'
 import { addItem, open } from '../../store/reducers/cart'
@@ -14,7 +15,7 @@ const Banner = () => {
   const dispatch = useDispatch()
 
   if (isLoading || !game) {
-    return <h3>Carregando...</h3>
+    return <Loader />
   }
 
   const handleAproveitar = () => {
